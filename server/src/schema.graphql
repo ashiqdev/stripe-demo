@@ -1,0 +1,25 @@
+# import * from './generated/prisma.graphql';
+
+type SuccessMessage {
+  message: String
+}
+
+type Query {
+  me: User
+}
+
+type Mutation {
+  signup(
+    name: String!
+    email: String!
+    password: String!
+    password: String!
+  ): User!
+
+  signin(email: String!, password: String!): User!
+  signout: SuccessMessage
+
+  createSubscription(source: String! last4cc: String!): User
+  changeCreditCard(source: String! last4cc: String!): User
+  cancelSubscription: User
+}

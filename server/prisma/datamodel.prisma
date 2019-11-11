@@ -1,0 +1,9 @@
+type User {
+ id: ID! @id
+ name: String!
+ email: String! @unique
+ password: String!
+ stripeId: String
+ type: String @default(value: "free trial")
+ last4cc: String
+}
